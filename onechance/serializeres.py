@@ -1,5 +1,7 @@
 from rest_framework import serializers
+
 from .models import Post
+
 
 class PostSerializer(serializers.ModelSerializer):
     user = serializers.CharField(source="handle_name")
@@ -9,4 +11,4 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('user', 'imgUrl', 'goodCount', 'createdAt')
+        fields = ("user", "imgUrl", "goodCount", "createdAt")
