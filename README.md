@@ -22,4 +22,4 @@ python manage.py runserver
   - posts/\<post_id\>
     - (PATCH) goodCount など、情報を変更
   - posts\/\?filter\=today
-    - その日の投稿を取得
+    - (GET) その日の投稿を取得
