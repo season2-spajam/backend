@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Post(models.Model):
     handle_name = models.CharField(max_length=255)
@@ -11,4 +9,5 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.handle_name + ": " + str(self.created_at)
+        created_at_str = self.created_at.strftime("%Y/%m/%d %H:%M:%S")
+        return f"({self.id}) {self.handle_name} : {created_at_str}"
