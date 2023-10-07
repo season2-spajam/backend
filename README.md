@@ -14,6 +14,7 @@ python manage.py runserver
 ```
 
 ## API endpoints
+127.0.0.1:8000/api/(なんか) に直接アクセスして確認できます。
 - 127.0.0.1:8000/api/
   - posts/
     - (GET) すべての投稿を取得
