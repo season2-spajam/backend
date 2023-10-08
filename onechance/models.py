@@ -11,3 +11,10 @@ class Post(models.Model):
     def __str__(self):
         created_at_str = self.created_at.strftime("%Y/%m/%d %H:%M:%S")
         return f"({self.id}) {self.handle_name} : {created_at_str}"
+
+
+class SingleImage(models.Model):
+    img = models.ImageField(upload_to="images/")
+
+    def __str__(self):
+        return f"({self.id}) {self.img.name}"

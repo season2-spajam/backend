@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .models import Post
-from .serializeres import PostSerializer
+from .models import Post, SingleImage
+from .serializeres import PostSerializer, SingleImageSerializer
 
 # 日時を扱う django のモジュールをインポート
 from django.utils import timezone
@@ -22,3 +22,8 @@ class PostViewSet(viewsets.ModelViewSet):
                 )
             )
         return queryset
+
+
+class SingleImageViewSet(viewsets.ModelViewSet):
+    queryset = SingleImage.objects.all()
+    serializer_class = SingleImageSerializer

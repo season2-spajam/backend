@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Post
+from .models import Post, SingleImage
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -14,3 +14,8 @@ class PostSerializer(serializers.ModelSerializer):
             "caption", 
             "created_at"
         )
+
+class SingleImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SingleImage
+        fields = ("img",)
