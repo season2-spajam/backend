@@ -5,6 +5,6 @@ from .views import PostViewSet, SingleImageViewSet
 
 router = DefaultRouter()
 router.register(r"posts", PostViewSet)
-router.register(r"single_images", SingleImageViewSet)
+router.register(r"single_image", SingleImageViewSet)
 
 urlpatterns = [] + router.urls
