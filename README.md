@@ -35,3 +35,6 @@ python manage.py runserver
     - (PATCH) goodCount など、情報を変更
   - posts\/\?filter\=today
     - (GET) その日の投稿を取得
+  - single\_image
+    - (POST) 画像のみを投稿
+      - Stable Diffusion API を叩くのに必要な静的画像リンクが返ってきます
