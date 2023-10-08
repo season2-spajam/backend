@@ -38,3 +38,6 @@ python manage.py runserver
   - single\_image
     - (POST) 画像のみを投稿
       - Stable Diffusion API を叩くのに必要な静的画像リンクが返ってきます
+  - posts_with_image_url/
+    - (GET) すべての投稿を取得
+    - (POST) 新しい投稿を追加
